@@ -18,6 +18,12 @@ export default createGlobalStyle`
   --overlay: rgba(86, 86, 86, 0.4);
 }
 
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
 @media(max-width: 720px) {
   html {
       font-size: 87.5%;
@@ -37,8 +43,13 @@ button {
   cursor: pointer;
 }
 
-a {
+input::placeholder {
+  color: var(--grey-text)
+}
+
+a, li, ul{
   color: inherit;
   text-decoration: none;
-}
+  list-style: none;
+} 
 `
