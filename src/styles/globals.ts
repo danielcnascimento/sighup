@@ -8,7 +8,14 @@ export default createGlobalStyle`
 }
 
 :root {
-  --white: #ffffff;
+  --primary: #FF3333;
+  --white: #E8E8E8;
+  --smooth-grey: #E8E8E8;
+  --medium-grey: #D5D5D5;
+  --dark-text: #222222;
+  --grey-text: #767676;
+  --disable: #CECECE;
+  --overlay: rgba(86, 86, 86, 0.4);
 }
 
 @media(max-width: 720px) {
