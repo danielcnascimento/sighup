@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
 :root {
   --primary: #FF3333;
-  --white: #E8E8E8;
+  --white: #FAFAFA;
   --smooth-grey: #E8E8E8;
   --medium-grey: #D5D5D5;
   --dark-text: #222222;
@@ -31,8 +31,8 @@ export default createGlobalStyle`
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
+  background: var(--primary);
+  color: var(--dark-text);
 }
 
 body, input, textarea, button {
