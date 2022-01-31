@@ -1,4 +1,5 @@
 import GlobalStyle from '../styles/globals'
+import Script from 'next/script';
 import type { AppProps } from 'next/app'
 import { ReactElement } from "react";
 import { theme } from '../styles/theme';
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
           <Component {...pageProps} />
           <GlobalStyle />
       </ThemeProvider>
+      <Script src="https://unpkg.com/styled-components/dist/styled-components.min.js" />
     </>
   )
 }

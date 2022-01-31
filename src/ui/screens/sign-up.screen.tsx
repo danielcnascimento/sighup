@@ -1,17 +1,15 @@
 import { ReactElement } from "react";
-import SighUpStepper from "./stepper/sign-up.stepper";
+import SighUpStepper from "./sections/stepper/sign-up.stepper.section";
+import SighUpBrand from "./sections/brand/sigh-up.brand.section";
+import { SighUpStyle } from "./sigh-up.style";
 
 function SignUpScreen(): ReactElement {
-    return (
-        <div>
-            <section>
-                <SighUpStepper />
-            </section>
-            <section>
-                {/* add logo components*/}
-            </section>
-        </div>
-    )
+  return (
+    <SighUpStyle>
+      <SighUpStepper />
+      <SighUpBrand />
+    </SighUpStyle>
+  )
 }
 
 export default SignUpScreen;
