@@ -1,50 +1,48 @@
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { Step, useForm, useStep } from "react-hooks-helper"
 import { ArrowForwardIosRounded } from "@material-ui/icons";
 import { UAUButtonComponent } from "../../../components";
 import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
 import { HeaderSection, BoardingSection } from "./stepper-sections";
+import { DefaultFormData, IShowStepperUI } from "./sign-up.stepper.section.types";
+import { ProfileSection } from "./stepper-sections/profile/profile.section";
 
-type StepperMap = {
-  [key: number]: () => ReactNode,
+function ShowStepperUI(stepperProps: IShowStepperUI) {
+  switch (stepperProps.index) {
+    case 0:
+      return <BoardingSection {...stepperProps} />;
+    case 1:
+      return <ProfileSection {...stepperProps} />
+  }
+
+  return <h1> Ops! </h1>
 }
 
 function SighUpStepper() {
-  const [activeStep, setActiveStep] = useState(0);
+  const [formData, setForm] = useForm<DefaultFormData>({
+    email: "",
+    password: "",
+    checkupPassword: "",
+  })
+  const { index, navigation } = useStep({
+    steps: 4,
+    initialStep: 0,
+  });
 
-  const stepperMap: StepperMap = {
-    0: () => <BoardingSection />,
-    1: () => <h1>Fim!!!</h1>
+  const stepperProps = {
+    index,
+    setForm,
+    formData,
+    navigation,
   }
-
-  const steps = Object.keys(stepperMap)
-  
-  // TODO: Deve enviar handleBack e handleNext para HeaderSection. 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1)
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1)
-  }
-  
-  const ShowStepperUI:ReactNode | any = useCallback(() => {
-    return function getStepUi() {
-      stepperMap[activeStep] || <h1> Ops! </h1>
-    }
-    
-  }, [
-    activeStep,
-    getStepUi,
-  ])
 
   return (
     <SighUpStepperContainer>
       <HeaderSection />
-      <ShowStepperUI />
+      <ShowStepperUI {...stepperProps} />
       <UAUButtonComponent
         text="Continuar"
-        onClick={() => handleNext}
         icon={<ArrowForwardIosRounded />}
+        onClick={navigation.next}
       />
     </SighUpStepperContainer>
   )

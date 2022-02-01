@@ -1,8 +1,16 @@
-import styled from "styled-components";
+import { makeStyles } from '@material-ui/core/styles';
 
-export const BoardingSectionStyle = styled.div`
-  width: 80%;
-  height: 50%;
+const useStyles = makeStyles({
+  heading: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
 
-  padding: 1rem 0;
-`
+    '& p': {
+      color: 'var(--dark-text)',
+    },
+  },
+});
+
+export default useStyles

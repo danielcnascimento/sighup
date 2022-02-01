@@ -51,5 +51,9 @@ a, li, ul{
   color: inherit;
   text-decoration: none;
   list-style: none;
-} 
+}
+
+p {
+  color: var(--dark-text);
+}
 `

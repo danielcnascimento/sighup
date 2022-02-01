@@ -7,7 +7,7 @@ import Document,
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { ServerStyleSheets } from '@material-ui/styles'
+import { ServerStyleSheets } from '@material-ui/styles';
 
 
 export default class MyDocument extends Document {
