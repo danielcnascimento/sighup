@@ -1,4 +1,4 @@
-import { Step, useForm, useStep } from "react-hooks-helper"
+import { useForm, useStep } from "react-hooks-helper"
 import { ArrowForwardIosRounded } from "@material-ui/icons";
 import { UAUButtonComponent } from "../../../components";
 import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
