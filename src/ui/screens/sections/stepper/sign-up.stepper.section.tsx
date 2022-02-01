@@ -22,6 +22,11 @@ function SighUpStepper() {
     email: "",
     password: "",
     checkupPassword: "",
+    firstname: "",
+    lastname: "",
+    nickname: "",
+    birthdate: null,
+    phoneNumber: "",
   })
   const { index, navigation } = useStep({
     steps: 4,
