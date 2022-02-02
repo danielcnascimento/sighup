@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, IconButton, Typography } from "@material-ui/core";
-import { InfoOutlined } from "@material-ui/icons";
+import { InfoOutlined, EmailOutlined } from "@material-ui/icons";
 import useStyles from "./header.component.style";
 import { UAUModal } from "../../../../../components";
 
@@ -8,6 +8,22 @@ interface HeaderComponentProps {
   title: string;
   subTitle: string;
 }
+
+const modalContentMap = [
+  {
+    title: "EMAIL",
+    text: "Com seu e-mail você consegue ter acesso a todos os nossos canais, e também deixamos a sua experiencia ainda mais incrível!",
+    icon: <EmailOutlined color="primary" />,
+  },{
+    title: "CELULAR",
+    text: "Usamos seu celular para manter você segura(o) caso seja necessário login de duas etapas, e também para deixar você sempre atualizada(o) das novidades!",
+    icon: <EmailOutlined color="primary" />,
+  },{
+    title: "ENDEREÇO",
+    text: "Com seu endenreço podemos passar informações mais rapidamente, como valor de frete, ou quando tem uma novidade pertinho de você ;)",
+    icon: <EmailOutlined color="primary" />,
+  },
+]
 
 function HeaderComponent({ title, subTitle }: HeaderComponentProps) {
   const classes = useStyles();
@@ -27,6 +43,7 @@ function HeaderComponent({ title, subTitle }: HeaderComponentProps) {
           isOpen={showModal}
           onClose={() => setShowModal(false)}
           modalTitle="Como usamos seus dados"
+          modalContent={modalContentMap}
         />
       )}
     </Box>

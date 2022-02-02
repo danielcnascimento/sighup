@@ -1,4 +1,4 @@
-import React, { useContext, createContext, ReactNode, useState, useEffect } from "react";
+import React, { useContext, createContext, ReactNode, useState, useEffect, useMemo } from "react";
 import { NavigationProps, useForm, useStep } from "react-hooks-helper";
 import {
   DefaultFormData,
@@ -45,12 +45,12 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
     initialStep: 0,
   });
 
+  // TODO: uncouple Address logic after release.
   const addressAPI = useAddressService()
 
   async function handleAddressInfo(cep: string) {
     const response = await addressAPI.getUserAddress(cep)
 
-    console.log('porra é essa:', addressInfo)
     return setAdressInfo({
       data: {
         city: response.data.city,
@@ -69,12 +69,22 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
     return
   }, [formData])
 
+  const hasHandlePrevious = useMemo(() => (
+    index > 0
+  ), [index])
+
+  const hasHandleNext = useMemo(() => (
+    index < 2
+  ), [index])
+
   const stepperProps = {
     index,
     setForm,
     formData,
     navigation,
     addressInfo,
+    hasHandleNext,
+    hasHandlePrevious,
   };
 
   return (

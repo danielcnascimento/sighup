@@ -21,18 +21,20 @@ interface IButton {
   text: string,
   icon?: ReactNode,
   onClick?: () => void,
+  isDisable?: boolean,
 }
-function UAUButtonComponent({ text, icon, onClick }:IButton) {
+function UAUButtonComponent({ text, icon, onClick, isDisable }:IButton) {
   const classes = useStyles();
 
   return (
     <Button
+      fullWidth
       variant="contained"
       color="primary"
-      onClick={onClick}
-      className={classes.root}
       endIcon={icon}
-      fullWidth
+      onClick={onClick}
+      disabled={isDisable}
+      className={classes.root}
     >
       {text}
     </Button>

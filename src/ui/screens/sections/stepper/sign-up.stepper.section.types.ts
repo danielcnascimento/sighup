@@ -21,4 +21,6 @@ export interface IShowStepperUI {
   setForm: SetForm,
   navigation: NavigationProps,
   addressInfo: IGetUserAddressResponse,
+  hasHandleNext: boolean,
+  hasHandlePrevious: boolean,
 }
