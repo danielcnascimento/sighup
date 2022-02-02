@@ -1,56 +1,43 @@
-import { useForm, useStep } from "react-hooks-helper"
 import { ArrowForwardIosRounded } from "@material-ui/icons";
 import { UAUButtonComponent } from "../../../components";
 import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
-import { HeaderSection, BoardingSection } from "./stepper-sections";
-import { DefaultFormData, IShowStepperUI } from "./sign-up.stepper.section.types";
-import { ProfileSection } from "./stepper-sections/profile/profile.section";
+import {
+  HeaderSection,
+  BoardingSection,
+  AddressSection,
+  ProfileSection,
+} from "./stepper-sections";
+import { useStepperForm } from "../../../../context/use-stepper-form.context";
 
-function ShowStepperUI(stepperProps: IShowStepperUI) {
+function ShowStepperUI() {
+  const { stepperProps } = useStepperForm();
+
   switch (stepperProps.index) {
     case 0:
       return <BoardingSection {...stepperProps} />;
     case 1:
-      return <ProfileSection {...stepperProps} />
+      return <ProfileSection {...stepperProps} />;
+    case 2:
+      return <AddressSection {...stepperProps} />;
   }
 
-  return <h1> Ops! </h1>
+  return <h1> Ops! </h1>;
 }
 
 function SighUpStepper() {
-  const [formData, setForm] = useForm<DefaultFormData>({
-    email: "",
-    password: "",
-    checkupPassword: "",
-    firstname: "",
-    lastname: "",
-    nickname: "",
-    birthdate: null,
-    phoneNumber: "",
-  })
-  const { index, navigation } = useStep({
-    steps: 4,
-    initialStep: 0,
-  });
-
-  const stepperProps = {
-    index,
-    setForm,
-    formData,
-    navigation,
-  }
+  const { stepperProps: { navigation, index: step } } = useStepperForm();
 
   return (
     <SighUpStepperContainer>
       <HeaderSection />
-      <ShowStepperUI {...stepperProps} />
+      <ShowStepperUI />
       <UAUButtonComponent
-        text="Continuar"
+        text={step === 2 ? 'Finalizar' : 'Continuar'}
         icon={<ArrowForwardIosRounded />}
         onClick={navigation.next}
       />
     </SighUpStepperContainer>
-  )
+  );
 }
 
-export default SighUpStepper
+export default SighUpStepper;

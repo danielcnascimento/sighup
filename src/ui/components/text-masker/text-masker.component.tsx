@@ -4,7 +4,7 @@ interface TextMaskCustomProps {
   inputRef: (ref: HTMLInputElement | null) => void;
 }
 
-function TextMaskCustom(props: TextMaskCustomProps) {
+function UAUTextMaskCustom(props: TextMaskCustomProps) {
   const { inputRef, ...other } = props;
 
   return (
@@ -20,4 +20,4 @@ function TextMaskCustom(props: TextMaskCustomProps) {
   );
 }
 
-export default  TextMaskCustom
+export { UAUTextMaskCustom }

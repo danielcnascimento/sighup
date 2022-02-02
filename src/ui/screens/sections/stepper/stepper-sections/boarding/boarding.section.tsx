@@ -1,44 +1,32 @@
 import {
   Box,
-  Container, IconButton,
+  Container,
+  IconButton,
   TextField,
   Typography,
 } from "@material-ui/core";
-import {
-  InfoOutlined
-} from "@material-ui/icons";
+import { InfoOutlined } from "@material-ui/icons";
 import { DefaultFormData } from "../../sign-up.stepper.section.types";
-import { SetForm } from 'react-hooks-helper';
-import useStyles from "./boarding.section.style";
+import { SetForm } from "react-hooks-helper";
+import HeaderComponent from "../../steppers-components/header/header.component";
 
 interface IBoardingSectionProps {
-  formData: DefaultFormData,
-  setForm: SetForm,
+  formData: DefaultFormData;
+  setForm: SetForm;
   navigation?: {
     next: () => void;
-  },
+  };
 }
 
 function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
   const { email, password, checkupPassword } = formData;
 
-  const classes = useStyles()
-
   return (
     <Container maxWidth="sm" disableGutters>
-      <Box className={classes.heading}>
-        <Box component="p">
-          <Typography variant="h5">
-            Cadastro da Mig!
-          </Typography>
-          <Typography variant="subtitle1">
-            Dica: Os campos marcados com (*) são obrigatórios ;)
-          </Typography>
-        </Box>
-        <IconButton>
-          <InfoOutlined color="primary" />
-        </IconButton>
-      </Box>
+      <HeaderComponent
+        title=" Cadastro da Mig!"
+        subTitle=" Dica: Os campos marcados com (*) são obrigatórios."
+      />
       <TextField
         label="Email válido"
         name="email"
@@ -69,7 +57,7 @@ function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
         fullWidth
       />
     </Container>
-  )
+  );
 }
 
-export { BoardingSection }
+export { BoardingSection };

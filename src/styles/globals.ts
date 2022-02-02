@@ -39,6 +39,12 @@ body, input, textarea, button {
   font: 400 1rem 'Montserrat', sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
 button {
   cursor: pointer;
 }
