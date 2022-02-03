@@ -30,8 +30,7 @@
 <p align="center">
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#protótipo">Design e Site</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#colab">Colabs</a>
+  <a href="#instalação">Instalação</a>
 </p>
 
 <h2 id="tecnologias">  🔎 Tecnologias </h2>
@@ -62,7 +61,7 @@ Design:
 
 - Design do [SignUp](https://www.figma.com/file/xFdz3RaCqP8mtn7uFU2IHn/MoveIt?node-id=0%3A1). Uma [conta](http://figma.com/) será necessária. 🖌️
 
-- [Site do SignUp](https://www.figma.com/file/myWAAOPJGPiMKbbSMCwPSi/UAU-Box?node-id=0%3A1), clique para visitar.
+- [Site do SignUp](https://uaubox-sign-up.vercel.app/), clique para visitar.
 <br />
 
 <h2 id="instalação"> Instalação </h2>
