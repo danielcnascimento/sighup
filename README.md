@@ -41,7 +41,7 @@ Tecnologias que foram exploradas:
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org)
 - [Next.js](https://nextjs.org/)
-- [Axious](https://www.npmjs.com/package/axios)
+- [Axios](https://www.npmjs.com/package/axios)
 - [Styled-Component](https://styled-components.com/)
 - [Material-UI](https://v4.mui.com/pt/)
 
