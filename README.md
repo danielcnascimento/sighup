@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"> SignUP </h1>
 
-## Getting Started
+<p align="center">
+<img align="center" alt="HTML5" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+<img align="center" alt="Visual Studio Code" width="40px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+<img align="center" alt="JavaScript" width="50px" style="border-radius:50px;" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" />
+<img align="center" alt="ReactJs" width="40px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+<img align="center" alt="CSS3" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://twitter.com/dancnascimento_">
+    <img alt="made by Daniel Nascimento" src="https://img.shields.io/badge/made%20by-Daniel%20Nascimento-%2304D361">
+  </a>
+  
+  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/danielcnascimento/luk-hub">
+  
+  <a href="https://github.com/danielcnascimento/cirillo-pomodoro">
+    <img alt="Quantidade de linguagens" src="https://img.shields.io/github/languages/count/danielcnascimento/luk-hub">
+  </a>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  
+  <a href="https://api.whatsapp.com/send?phone=5521966305390&text=Ola">
+    <img alt="Whatsapp contato" src="https://img.shields.io/badge/WhatsApp-Dan-green.svg">
+  </a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">Topicos</p>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<p align="center">
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#protótipo">Design e Site</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalação">Instalação</a>
+</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<h2 id="tecnologias">  🔎 Tecnologias </h2>
+Tecnologias que foram exploradas:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br />
 
-## Learn More
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Styled-Component](https://styled-components.com/)
+- [Material-UI](https://v4.mui.com/pt/)
 
-To learn more about Next.js, take a look at the following resources:
+<h2 id="funcionalidades" > 🎬 Ações </h2>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br />
+Ideal:
+<p>
+  Stepper com objetivo de persistir e encaminhar formulário.
+</p>  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+<h2 id="protótipo"> Protótipo </h2>
+Design:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Design do [SignUp](https://www.figma.com/file/xFdz3RaCqP8mtn7uFU2IHn/MoveIt?node-id=0%3A1). Uma [conta](http://figma.com/) será necessária. 🖌️
+
+- [Site do SignUp](https://uaubox-sign-up.vercel.app/), clique para visitar.
+<br />
+
+<h2 id="instalação"> Instalação </h2>
+
+<br />
+
+- Clone o repositório `https://github.com/danielcnascimento/sign-in.git` 📋
+- Instale as dependências com `yarn` 🧶
+- Inicie o servidor com `yarn dev` 🌐
+
+<br />
+<br />
+
+<p align="center"> SignUp - Feito com 💚 por Daniel Nascimento 👋🏻 - ©️ copyright 2021 </p>
