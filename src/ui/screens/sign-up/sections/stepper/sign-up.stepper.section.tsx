@@ -1,5 +1,5 @@
 import { ArrowForwardIosRounded } from "@material-ui/icons";
-import { UAUButtonComponent } from "../../../components";
+import { UAUButtonComponent } from "../../../../components";
 import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
 import {
   HeaderSection,
@@ -7,7 +7,7 @@ import {
   AddressSection,
   ProfileSection,
 } from "./stepper-sections";
-import { useStepperForm } from "../../../../context/use-stepper-form.context";
+import { useStepperForm } from "../../../../../context/use-stepper-form.context";
 
 function ShowStepperUI() {
   const { stepperProps } = useStepperForm();
@@ -25,7 +25,7 @@ function ShowStepperUI() {
 }
 
 function SighUpStepper() {
-  const { stepperProps: { navigation, index: step } } = useStepperForm();
+  const { stepperProps: { navigation, index: step, handleStepperPress } } = useStepperForm();
 
   return (
     <SighUpStepperContainer>
@@ -34,7 +34,7 @@ function SighUpStepper() {
       <UAUButtonComponent
         text={step === 2 ? 'Finalizar' : 'Continuar'}
         icon={<ArrowForwardIosRounded />}
-        onClick={navigation.next}
+        onClick={() => handleStepperPress()}
       />
     </SighUpStepperContainer>
   );

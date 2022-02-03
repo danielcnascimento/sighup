@@ -4,16 +4,9 @@ import { ReactNode } from 'react';
 
 const useStyles = makeStyles({
   root: {
-    height: 56,
-    width: '80%',
-    borderRadius: 40,
-    textTransform: 'none',
-    fontSize: 22,
-    '& svg': {
-      position: 'absolute',
-      top: 17,
-      right: 25,
-    },
+    position: 'absolute',
+    top: 17,
+    right: 25,
   },
 });
 
@@ -28,13 +21,19 @@ function UAUButtonComponent({ text, icon, onClick, isDisable }:IButton) {
 
   return (
     <Button
-      fullWidth
+      classes={{ endIcon: classes.root }}
+      style={{
+        height: 56,
+        width: '80%',
+        borderRadius: 40,
+        textTransform: 'none',
+        fontSize: 22,
+      }}
       variant="contained"
       color="primary"
       endIcon={icon}
       onClick={onClick}
       disabled={isDisable}
-      className={classes.root}
     >
       {text}
     </Button>

@@ -3,9 +3,10 @@ import { NavigationProps, useForm, useStep } from "react-hooks-helper";
 import {
   DefaultFormData,
   IShowStepperUI,
-} from "../ui/screens/sections/stepper/sign-up.stepper.section.types";
+} from "../ui/screens/sign-up/sections/stepper/sign-up.stepper.section.types";
 import { IGetUserAddressResponse } from "../services/address/types/get-user-address-response.types";
 import { useAddressService } from "../services/address/address.service";
+import useUauRouter from "../core/hooks/use-uau-router/use-uau-router.hooks";
 
 interface StepperFormContextProps {
   stepperProps: IShowStepperUI;
@@ -39,11 +40,12 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
     city: "",
     neighborhood: "",
   });
-
   const { index, navigation } = useStep({
     steps: 3,
     initialStep: 0,
   });
+
+  const { pushToConclusion } = useUauRouter();
 
   // TODO: uncouple Address logic after release.
   const addressAPI = useAddressService()
@@ -77,7 +79,15 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
     index < 2
   ), [index])
 
-  const stepperProps = {
+  const handleStepperPress = (): void => {
+    if (index === 2) {
+      pushToConclusion()
+      return
+    }
+    navigation.next()
+  }
+
+  const stepperProps: IShowStepperUI = {
     index,
     setForm,
     formData,
@@ -85,6 +95,7 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
     addressInfo,
     hasHandleNext,
     hasHandlePrevious,
+    handleStepperPress,
   };
 
   return (

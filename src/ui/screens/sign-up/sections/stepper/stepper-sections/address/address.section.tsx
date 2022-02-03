@@ -9,7 +9,7 @@ import { InfoOutlined } from "@material-ui/icons";
 import { DefaultFormData } from "../../sign-up.stepper.section.types";
 import { SetForm } from "react-hooks-helper";
 import HeaderComponent from "../../steppers-components/header/header.component";
-import { IGetUserAddressResponse } from "../../../../../../services/address/types/get-user-address-response.types";
+import { IGetUserAddressResponse } from "../../../../../../../services/address/types/get-user-address-response.types";
 
 interface IAddressSectionProps {
   formData: DefaultFormData;

@@ -1,5 +1,5 @@
 import { NavigationProps, SetForm } from "react-hooks-helper";
-import {IGetUserAddressResponse} from "../../../../services/address/types/get-user-address-response.types";
+import { IGetUserAddressResponse } from "../../../../../services/address/types/get-user-address-response.types";
 
 export interface  DefaultFormData {
   email: string,
@@ -23,4 +23,5 @@ export interface IShowStepperUI {
   addressInfo: IGetUserAddressResponse,
   hasHandleNext: boolean,
   hasHandlePrevious: boolean,
+  handleStepperPress: VoidFunction,
 }

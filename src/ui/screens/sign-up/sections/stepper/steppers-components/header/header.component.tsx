@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, IconButton, Typography } from "@material-ui/core";
 import { InfoOutlined, EmailOutlined } from "@material-ui/icons";
 import useStyles from "./header.component.style";
-import { UAUModal } from "../../../../../components";
+import { UAUModal } from "../../../../../../components";
 
 interface HeaderComponentProps {
   title: string;
