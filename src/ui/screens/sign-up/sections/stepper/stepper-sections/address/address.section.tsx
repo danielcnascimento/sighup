@@ -24,7 +24,6 @@ function AddressSection({ setForm, formData, addressInfo }: IAddressSectionProps
     district: userAddressNeiborhood,
   } } = addressInfo
 
-  console.log('tem coisa errada aew: ', userAddressCity)
   return (
     <Container maxWidth="sm" disableGutters>
       <HeaderComponent
@@ -38,9 +37,9 @@ function AddressSection({ setForm, formData, addressInfo }: IAddressSectionProps
         value={cep}
         onChange={setForm}
         margin="normal"
-        autoComplete="new-password"
         fullWidth
         inputProps={{ maxLength: "8" }}
+        autoComplete="new-password"
       />
       <TextField
         label="Cidade"

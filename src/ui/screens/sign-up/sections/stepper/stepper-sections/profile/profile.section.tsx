@@ -33,8 +33,8 @@ function ProfileSection({
         value={firstname}
         onChange={setForm}
         margin="normal"
-        autoComplete="off"
         fullWidth
+        autoComplete="new-password"
       />
       <TextField
         label="Sobrenome"
@@ -42,8 +42,8 @@ function ProfileSection({
         value={lastname}
         onChange={setForm}
         margin="normal"
-        autoComplete="off"
         fullWidth
+        autoComplete="new-password"
       />
       <TextField
         label="Qual seu apelido ou nome social?"
@@ -51,8 +51,8 @@ function ProfileSection({
         value={nickname}
         onChange={setForm}
         margin="normal"
-        autoComplete="off"
         fullWidth
+        autoComplete="new-password"
       />
       <Input
         value={phoneNumber}

@@ -28,8 +28,8 @@ function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
         value={email}
         onChange={setForm}
         margin="normal"
-        autoComplete="off"
         fullWidth
+        autoComplete="new-password"
       />
       <TextField
         label="Senha"
@@ -38,8 +38,8 @@ function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
         type="password"
         onChange={setForm}
         margin="normal"
-        autoComplete="off"
         fullWidth
+        autoComplete="new-password"
       />
       <TextField
         label="Confirme sua senha"
@@ -48,8 +48,8 @@ function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
         type="password"
         onChange={setForm}
         margin="normal"
-        autoComplete="off"
         fullWidth
+        autoComplete="new-password"
       />
     </Container>
   );
