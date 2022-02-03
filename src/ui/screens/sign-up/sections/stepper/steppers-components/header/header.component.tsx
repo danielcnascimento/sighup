@@ -12,7 +12,7 @@ interface HeaderComponentProps {
 const modalContentMap = [
   {
     title: "EMAIL",
-    text: "Com seu e-mail você consegue ter acesso a todos os nossos canais, e também deixamos a sua experiencia ainda mais incrível!",
+    text: "Com seu e-mail você consegue ter acesso a todos os nossos canais, e também deixamos a sua experiência ainda mais incrível!",
     icon: <EmailOutlined color="primary" />,
   },{
     title: "CELULAR",
@@ -20,7 +20,7 @@ const modalContentMap = [
     icon: <EmailOutlined color="primary" />,
   },{
     title: "ENDEREÇO",
-    text: "Com seu endenreço podemos passar informações mais rapidamente, como valor de frete, ou quando tem uma novidade pertinho de você ;)",
+    text: "Com seu endereço, podemos passar informações mais rapidamente, como valor de frete, ou quando tem uma novidade pertinho de você ;)",
     icon: <EmailOutlined color="primary" />,
   },
 ]
