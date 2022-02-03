@@ -1,26 +1,21 @@
 import {
-  Box,
   Container,
-  IconButton,
   TextField,
-  Typography,
 } from "@material-ui/core";
-import { InfoOutlined } from "@material-ui/icons";
-import { DefaultFormData } from "../../sign-up.stepper.section.types";
+import { IDefaultFormData } from "../../sign-up.stepper.section.types";
 import { SetForm } from "react-hooks-helper";
 import HeaderComponent from "../../steppers-components/header/header.component";
 
 interface IBoardingSectionProps {
-  formData: DefaultFormData;
+  formData: IDefaultFormData;
   setForm: SetForm;
-  navigation?: {
-    next: () => void;
-  };
+
 }
 
 function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
   const { email, password, checkupPassword } = formData;
 
+ // TODO: Implementação do controller apos release.
   return (
     <Container maxWidth="sm" disableGutters>
       <HeaderComponent

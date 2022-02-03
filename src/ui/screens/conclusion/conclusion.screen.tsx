@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { ConclusionStyle } from "./conclusion.style";
-
-import { ReactNode } from "react";
 import { useStepperForm } from "../../../context/use-stepper-form.context";
 
-function ConclusionScreen(): ReactNode{
+function ConclusionScreen(){
   const { stepperProps: {
     formData
   } } = useStepperForm()

@@ -9,7 +9,6 @@ import Document,
 import { ServerStyleSheet } from 'styled-components';
 import { ServerStyleSheets } from '@material-ui/styles';
 
-
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext

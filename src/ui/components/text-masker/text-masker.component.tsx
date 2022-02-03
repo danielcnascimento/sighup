@@ -4,6 +4,7 @@ interface TextMaskCustomProps {
   inputRef: (ref: HTMLInputElement | null) => void;
 }
 
+//TODO: Deixar masket mais dinâmico para atender mais cenários após release.
 function UAUTextMaskCustom(props: TextMaskCustomProps) {
   const { inputRef, ...other } = props;
 

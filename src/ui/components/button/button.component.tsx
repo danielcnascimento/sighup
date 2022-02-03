@@ -34,6 +34,7 @@ function UAUButtonComponent({ text, icon, onClick, isDisable }:IButton) {
       endIcon={icon}
       onClick={onClick}
       disabled={isDisable}
+      type="submit"
     >
       {text}
     </Button>

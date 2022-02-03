@@ -3,13 +3,13 @@ import {
   Input,
   TextField,
 } from "@material-ui/core";
-import { DefaultFormData } from "../../sign-up.stepper.section.types";
+import { IDefaultFormData } from "../../sign-up.stepper.section.types";
 import { SetForm } from "react-hooks-helper";
 import { UAUTextMaskCustom } from "../../../../../../components";
 import HeaderComponent from "../../steppers-components/header/header.component";
 
 interface IProfileSectionProps {
-  formData: DefaultFormData;
+  formData: IDefaultFormData;
   setForm: SetForm;
 }
 

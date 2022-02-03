@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const BrandStyle = styled.div`
+height: 100vh;  
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
+  
+transition: image 200ms;
 & p {
   width: 50%;
   

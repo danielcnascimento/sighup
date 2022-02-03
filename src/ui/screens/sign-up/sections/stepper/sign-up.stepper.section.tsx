@@ -8,6 +8,8 @@ import {
   ProfileSection,
 } from "./stepper-sections";
 import { useStepperForm } from "../../../../../context/use-stepper-form.context";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { IDefaultFormData } from "./sign-up.stepper.section.types";
 
 function ShowStepperUI() {
   const { stepperProps } = useStepperForm();
@@ -25,12 +27,20 @@ function ShowStepperUI() {
 }
 
 function SighUpStepper() {
-  const { stepperProps: { navigation, index: step, handleStepperPress } } = useStepperForm();
+  const { stepperProps: { index: step, handleStepperPress } } = useStepperForm();
+
+  const { handleSubmit } = useForm<IDefaultFormData>();
+
+  const onSubmit: SubmitHandler<IDefaultFormData> = (data) => {
+    handleStepperPress()
+  }
 
   return (
     <SighUpStepperContainer>
       <HeaderSection />
-      <ShowStepperUI />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <ShowStepperUI />
+      </form>
       <UAUButtonComponent
         text={step === 2 ? 'Finalizar' : 'Continuar'}
         icon={<ArrowForwardIosRounded />}

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Modal from "react-modal";
-import {Box, IconButton, makeStyles, Typography} from "@material-ui/core";
-import {CloseRounded, EmailOutlined} from "@material-ui/icons";
+import { Box, IconButton, makeStyles, Typography } from "@material-ui/core";
+import { CloseRounded } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   globalModalOverly: {

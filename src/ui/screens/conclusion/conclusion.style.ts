@@ -16,11 +16,16 @@ export const ConclusionStyle = styled.div`
 
     text-align: center;
 
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--white);
     
-    @media(max-width: 600px) {
+    @media(max-width: 720px) {
+      width: 80%;
+      font-size: 1rem;
+    }
+    @media(max-width: 425px) {
+      width: 95%;
       font-size: 1rem;
     }
   }

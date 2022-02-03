@@ -1,7 +1,7 @@
 import React, { useContext, createContext, ReactNode, useState, useEffect, useMemo } from "react";
 import { NavigationProps, useForm, useStep } from "react-hooks-helper";
 import {
-  DefaultFormData,
+  IDefaultFormData,
   IShowStepperUI,
 } from "../ui/screens/sign-up/sections/stepper/sign-up.stepper.section.types";
 import { IGetUserAddressResponse } from "../services/address/types/get-user-address-response.types";
@@ -27,7 +27,7 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
       district: "",
     }
   })
-  const [formData, setForm] = useForm<DefaultFormData>({
+  const [formData, setForm] = useForm<IDefaultFormData>({
     email: "",
     password: "",
     checkupPassword: "",
@@ -47,7 +47,7 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
 
   const { pushToConclusion } = useUauRouter();
 
-  // TODO: uncouple Address logic after release.
+  // TODO: desacoplar lógica após release.
   const addressAPI = useAddressService()
 
   async function handleAddressInfo(cep: string) {

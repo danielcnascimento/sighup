@@ -1,7 +1,7 @@
 import { NavigationProps, SetForm } from "react-hooks-helper";
 import { IGetUserAddressResponse } from "../../../../../services/address/types/get-user-address-response.types";
 
-export interface  DefaultFormData {
+export interface IDefaultFormData {
   email: string,
   password: string,
   checkupPassword: string,
@@ -17,7 +17,7 @@ export interface  DefaultFormData {
 
 export interface IShowStepperUI {
   index: number,
-  formData: DefaultFormData,
+  formData: IDefaultFormData,
   setForm: SetForm,
   navigation: NavigationProps,
   addressInfo: IGetUserAddressResponse,
