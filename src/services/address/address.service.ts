@@ -6,6 +6,9 @@ import useAxios from "../use-axios";
 export function useAddressService(): IUseAddressService {
   const axios = useAxios().createInstance();
 
+  /* Busca Endereço do usuário.
+  * referencia DOC: https://apicep.com/api-de-consulta/
+  * */
   async function getUserAddress(cepCode:string): Promise<IGetUserAddressResponse> {
     try {
       const response = await axios
