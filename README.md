@@ -59,7 +59,7 @@ Design:
 
 <br />
 
-- Design do [SignUp](https://www.figma.com/file/xFdz3RaCqP8mtn7uFU2IHn/MoveIt?node-id=0%3A1). Uma [conta](http://figma.com/) será necessária. 🖌️
+- Design do [SignUp](https://www.figma.com/file/myWAAOPJGPiMKbbSMCwPSi/UAU-Box?node-id=0%3A1). Uma [conta](http://figma.com/) será necessária. 🖌️
 
 - [Site do SignUp](https://uaubox-sign-up.vercel.app/), clique para visitar.
 <br />
