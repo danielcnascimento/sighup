@@ -5,7 +5,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
 
     '& p': {
       color: 'var(--dark-text)',

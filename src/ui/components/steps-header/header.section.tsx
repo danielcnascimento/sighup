@@ -4,10 +4,10 @@ import {
 } from "@material-ui/icons";
 import { IconButton } from "@material-ui/core";
 import { HeaderSectionStyle } from "./header.section.style";
-import { UAUProgressComponent } from "../../../../../../components";
-import { useStepperForm } from "../../../../../../../context/use-stepper-form.context";
+import { UAUProgressComponent } from "../index";
+import { useStepperForm } from "../../../context/use-stepper-form.context";
 
-function HeaderSection() {
+function UAUStepsHeaderComponent() {
   const { stepperProps: {
     index,
     navigation,
@@ -36,4 +36,4 @@ function HeaderSection() {
   );
 }
 
-export { HeaderSection };
+export { UAUStepsHeaderComponent };

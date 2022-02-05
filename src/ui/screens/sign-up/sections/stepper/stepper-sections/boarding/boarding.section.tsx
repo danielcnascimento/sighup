@@ -2,15 +2,8 @@ import {
   Container,
   TextField,
 } from "@material-ui/core";
-import { IDefaultFormData } from "../../sign-up.stepper.section.types";
-import { SetForm } from "react-hooks-helper";
 import HeaderComponent from "../../steppers-components/header/header.component";
-
-interface IBoardingSectionProps {
-  formData: IDefaultFormData;
-  setForm: SetForm;
-
-}
+import { IBoardingSectionProps } from "./boarding.section.type";
 
 function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
   const { email, password, checkupPassword } = formData;

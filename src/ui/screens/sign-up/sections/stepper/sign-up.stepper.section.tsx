@@ -1,14 +1,16 @@
 import { ArrowForwardIosRounded } from "@material-ui/icons";
-import { UAUButtonComponent } from "../../../../components";
-import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useStepperForm } from "../../../../../context/use-stepper-form.context";
 import {
-  HeaderSection,
+  UAUButtonComponent,
+  UAUStepsHeaderComponent,
+} from "../../../../components";
+import {
   BoardingSection,
   AddressSection,
   ProfileSection,
 } from "./stepper-sections";
-import { useStepperForm } from "../../../../../context/use-stepper-form.context";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
 import { IDefaultFormData } from "./sign-up.stepper.section.types";
 
 function ShowStepperUI() {
@@ -37,15 +39,14 @@ function SighUpStepper() {
 
   return (
     <SighUpStepperContainer>
-      <HeaderSection />
+      <UAUStepsHeaderComponent />
       <form onSubmit={handleSubmit(onSubmit)}>
         <ShowStepperUI />
+        <UAUButtonComponent
+          text={step === 2 ? 'Finalizar' : 'Continuar'}
+          icon={<ArrowForwardIosRounded />}
+        />
       </form>
-      <UAUButtonComponent
-        text={step === 2 ? 'Finalizar' : 'Continuar'}
-        icon={<ArrowForwardIosRounded />}
-        onClick={() => handleStepperPress()}
-      />
     </SighUpStepperContainer>
   );
 }

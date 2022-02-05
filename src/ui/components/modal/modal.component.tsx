@@ -17,10 +17,10 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   globalModalContent: {
-    position: "relative",
     maxWidth: 600,
     width: "100%",
-    padding: ".5rem 2rem 2rem",
+    position: "relative",
+    padding: ".5rem 2rem 3rem",
     backgroundColor: "white",
     borderRadius: "15px",
     fontSize: "1.2rem",
