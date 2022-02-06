@@ -3,5 +3,22 @@
   "rules": {
     "object-curly-spacing": ["error", "always"],
     "no-trailing-spaces": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "src/ui/components"],
+          ["@screens", "src/ui/screens"],
+          ["@context", "src/context"],
+          ["@services", "src/services"],
+          ["@core", "src/core"]
+        ],
+        "extensions": [".ts", ".tsx" ,".js", ".jsx", ".json"]
+      }
+    }
   }
 }

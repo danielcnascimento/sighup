@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import { ReactElement } from "react";
 import { theme } from "../styles/theme";
 import { ThemeProvider } from "@material-ui/styles";
-import { StepperFormProvider } from "../context/use-stepper-form.context";
+import { StepperFormProvider } from "@context/use-stepper-form.context";
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (

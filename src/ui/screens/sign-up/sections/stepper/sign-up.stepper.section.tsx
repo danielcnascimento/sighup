@@ -1,10 +1,10 @@
 import { ArrowForwardIosRounded } from "@material-ui/icons";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useStepperForm } from "../../../../../context/use-stepper-form.context";
+import { useStepperForm } from "@context/use-stepper-form.context";
 import {
   UAUButtonComponent,
-  UAUStepsHeaderComponent,
-} from "../../../../components";
+  UAUStepsHeaderComponent
+} from "@components";
 import {
   BoardingSection,
   AddressSection,

@@ -1,5 +1,5 @@
 export { UAUModal } from './modal/modal.component'
-export { UAUTextMaskCustom } from './text-masker/text-masker.component'
 export { UAUButtonComponent } from './button/button.component'
 export { UAUProgressComponent } from './progress/progress.component'
 export { UAUStepsHeaderComponent } from './steps-header/header.section'
+export { UAUTextMaskCustomComponent } from './text-masker/text-masker.component'

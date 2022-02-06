@@ -1,5 +1,5 @@
 import { NavigationProps, SetForm } from "react-hooks-helper";
-import { IGetUserAddressResponse } from "../../../../../services/address/types/get-user-address-response.types";
+import { IGetUserAddressResponse } from "@services/address/types/get-user-address-response.types";
 
 export interface IDefaultFormData {
   email: string,

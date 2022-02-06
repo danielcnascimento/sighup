@@ -3,9 +3,9 @@ import {
   Input,
   TextField,
 } from "@material-ui/core";
-import { UAUTextMaskCustom } from "../../../../../../components";
 import HeaderComponent from "../../steppers-components/header/header.component";
 import { IProfileSectionProps } from "./profile.section.type";
+import { UAUTextMaskCustomComponent } from "@components";
 
 function ProfileSection({
   setForm,
@@ -52,7 +52,7 @@ function ProfileSection({
         value={phoneNumber}
         onChange={setForm}
         name="phoneNumber"
-        inputComponent={UAUTextMaskCustom as any}
+        inputComponent={UAUTextMaskCustomComponent as any}
         fullWidth
       />
     </Container>

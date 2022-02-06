@@ -5,7 +5,7 @@ interface TextMaskCustomProps {
 }
 
 //TODO: Deixar masket mais dinâmico para atender mais cenários após release.
-function UAUTextMaskCustom(props: TextMaskCustomProps) {
+function UAUTextMaskCustomComponent(props: TextMaskCustomProps) {
   const { inputRef, ...other } = props;
 
   return (
@@ -21,4 +21,4 @@ function UAUTextMaskCustom(props: TextMaskCustomProps) {
   );
 }
 
-export { UAUTextMaskCustom }
+export { UAUTextMaskCustomComponent }

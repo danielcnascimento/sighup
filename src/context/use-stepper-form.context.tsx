@@ -1,12 +1,18 @@
-import React, { useContext, createContext, ReactNode, useState, useEffect, useMemo } from "react";
-import { NavigationProps, useForm, useStep } from "react-hooks-helper";
+import React, {
+  useMemo,
+  useState,
+  useEffect,
+  useContext,
+  ReactNode,
+  createContext,
+} from "react";
+import { useForm, useStep } from "react-hooks-helper";
 import {
-  IDefaultFormData,
-  IShowStepperUI,
-} from "../ui/screens/sign-up/sections/stepper/sign-up.stepper.section.types";
-import { IGetUserAddressResponse } from "../services/address/types/get-user-address-response.types";
-import { useAddressService } from "../services/address/address.service";
-import useUauRouter from "../core/hooks/use-uau-router/use-uau-router.hooks";
+  IDefaultFormData, IShowStepperUI,
+} from "@screens/sign-up/sections/stepper/sign-up.stepper.section.types";
+import { IGetUserAddressResponse } from "@services/address/types/get-user-address-response.types";
+import { useAddressService } from "@services/address/address.service";
+import useUAURouter from "@core/hooks/use-uau-router/use-uau-router.hooks";
 
 interface StepperFormContextProps {
   stepperProps: IShowStepperUI;
@@ -45,7 +51,7 @@ export const StepperFormProvider = ({ children }: StepperFormProviderProps) => {
     initialStep: 0,
   });
 
-  const { pushToConclusion } = useUauRouter();
+  const { pushToConclusion } = useUAURouter();
 
   // TODO: desacoplar lógica após release.
   const addressAPI = useAddressService()

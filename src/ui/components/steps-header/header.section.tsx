@@ -5,7 +5,7 @@ import {
 import { IconButton } from "@material-ui/core";
 import { HeaderSectionStyle } from "./header.section.style";
 import { UAUProgressComponent } from "../index";
-import { useStepperForm } from "../../../context/use-stepper-form.context";
+import { useStepperForm } from "@context/use-stepper-form.context";
 
 function UAUStepsHeaderComponent() {
   const { stepperProps: {

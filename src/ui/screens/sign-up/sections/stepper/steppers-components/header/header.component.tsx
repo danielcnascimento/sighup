@@ -11,7 +11,7 @@ import {
   SmartphoneOutlined,
 } from "@material-ui/icons";
 import useStyles from "./header.component.style";
-import { UAUModal } from "../../../../../../components";
+import { UAUModal } from "@components";
 
 interface HeaderComponentProps {
   title: string;

@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "noImplicitAny":true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "allowJs": true,
@@ -16,8 +20,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@components*": ["ui/components"],
+      "@screens/*": ["ui/screens/*"],
+      "@context/*": ["context/*"],
+      "@services/*": ["services/*"],
+      "@core/*": ["core/*"],
+    },
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_document.tsx",
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
