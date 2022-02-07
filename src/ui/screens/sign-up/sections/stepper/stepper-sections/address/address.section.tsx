@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import {
   Container,
   TextField,
@@ -5,7 +6,7 @@ import {
 import HeaderComponent from "../../steppers-components/header/header.component";
 import { IAddressSectionProps } from "./address.section.type";
 
-function AddressSection({ setForm, formData, addressInfo }: IAddressSectionProps) {
+function AddressSection({ setForm, formData, addressInfo }: IAddressSectionProps): ReactElement {
   const { cep } = formData;
 
   const { data: {

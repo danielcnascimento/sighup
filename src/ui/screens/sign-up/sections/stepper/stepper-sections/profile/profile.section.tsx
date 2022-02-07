@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import {
   Container,
   Input,
@@ -10,7 +11,7 @@ import { UAUTextMaskCustomComponent } from "@components";
 function ProfileSection({
   setForm,
   formData,
-}: IProfileSectionProps) {
+}: IProfileSectionProps): ReactElement {
 
   const { firstname, lastname, nickname, phoneNumber } = formData;
 

@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import {
   Container,
   TextField,
@@ -5,7 +6,7 @@ import {
 import HeaderComponent from "../../steppers-components/header/header.component";
 import { IBoardingSectionProps } from "./boarding.section.type";
 
-function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
+function BoardingSection({ setForm, formData }: IBoardingSectionProps): ReactElement {
   const { email, password, checkupPassword } = formData;
 
  // TODO: Implementação do controller apos release.
