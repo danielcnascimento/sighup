@@ -1,7 +1,8 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Modal from "react-modal";
 import { Box, IconButton, makeStyles, Typography } from "@material-ui/core";
 import { CloseRounded } from "@material-ui/icons";
+import { IModalsProps } from "./modal.component.type";
 
 const useStyles = makeStyles({
   globalModalOverly: {
@@ -17,10 +18,10 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   globalModalContent: {
-    position: "relative",
     maxWidth: 600,
     width: "100%",
-    padding: ".5rem 2rem 2rem",
+    position: "relative",
+    padding: ".5rem 2rem 3rem",
     backgroundColor: "white",
     borderRadius: "15px",
     fontSize: "1.2rem",
@@ -55,19 +56,6 @@ const useStyles = makeStyles({
     }
   },
 });
-
-type modalContentBox = {
-  title: string,
-  text: string,
-  icon: ReactNode,
-}
-
-interface IModalsProps {
-  isOpen: boolean;
-  onClose?: () => void;
-  modalTitle?: string;
-  modalContent?: modalContentBox[];
-}
 
 export function UAUModal({
   isOpen,

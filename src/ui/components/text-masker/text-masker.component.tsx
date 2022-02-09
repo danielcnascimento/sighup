@@ -1,11 +1,8 @@
 import MaskedInput from 'react-text-mask';
-
-interface TextMaskCustomProps {
-  inputRef: (ref: HTMLInputElement | null) => void;
-}
+import { TextMaskCustomProps } from "./text-masker.component.type";
 
 //TODO: Deixar masket mais dinâmico para atender mais cenários após release.
-function UAUTextMaskCustom(props: TextMaskCustomProps) {
+function UAUTextMaskCustomComponent(props: TextMaskCustomProps) {
   const { inputRef, ...other } = props;
 
   return (
@@ -21,4 +18,4 @@ function UAUTextMaskCustom(props: TextMaskCustomProps) {
   );
 }
 
-export { UAUTextMaskCustom }
+export { UAUTextMaskCustomComponent }

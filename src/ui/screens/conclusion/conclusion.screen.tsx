@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ConclusionStyle } from "./conclusion.style";
-import { useStepperForm } from "../../../context/use-stepper-form.context";
+import { useStepperForm } from "@context/use-stepper-form.context";
 
 function ConclusionScreen(){
   const { stepperProps: {

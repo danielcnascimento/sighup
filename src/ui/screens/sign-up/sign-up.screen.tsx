@@ -1,14 +1,14 @@
 import { ReactElement } from "react";
 import SighUpStepper from "./sections/stepper/sign-up.stepper.section";
 import SighUpBrand from "./sections/brand/sigh-up.brand.section";
-import { SighUpStyle } from "./sigh-up.style";
+import { SighUpContainer } from "./sigh-up.style";
 
 function SignUpScreen(): ReactElement {
   return (
-    <SighUpStyle>
+    <SighUpContainer>
       <SighUpStepper />
       <SighUpBrand />
-    </SighUpStyle>
+    </SighUpContainer>
   )
 }
 

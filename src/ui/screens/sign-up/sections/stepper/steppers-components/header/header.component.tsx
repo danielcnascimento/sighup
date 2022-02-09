@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { Box, IconButton, Typography } from "@material-ui/core";
-import { InfoOutlined, EmailOutlined } from "@material-ui/icons";
+import {
+  Box,
+  IconButton,
+  Typography,
+} from "@material-ui/core";
+import {
+  InfoOutlined,
+  EmailOutlined,
+  PinDropOutlined,
+  SmartphoneOutlined,
+} from "@material-ui/icons";
 import useStyles from "./header.component.style";
-import { UAUModal } from "../../../../../../components";
+import { UAUModal } from "@components";
 
 interface HeaderComponentProps {
   title: string;
@@ -17,11 +26,11 @@ const modalContentMap = [
   },{
     title: "CELULAR",
     text: "Usamos seu celular para manter você segura(o) caso seja necessário login de duas etapas, e também para deixar você sempre atualizada(o) das novidades!",
-    icon: <EmailOutlined color="primary" />,
+    icon: <SmartphoneOutlined color="primary" />,
   },{
     title: "ENDEREÇO",
     text: "Com seu endereço, podemos passar informações mais rapidamente, como valor de frete, ou quando tem uma novidade pertinho de você ;)",
-    icon: <EmailOutlined color="primary" />,
+    icon: <PinDropOutlined color="primary" />,
   },
 ]
 

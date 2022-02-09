@@ -1,22 +1,17 @@
+import { ReactElement } from "react";
 import {
   Container,
   Input,
   TextField,
 } from "@material-ui/core";
-import { IDefaultFormData } from "../../sign-up.stepper.section.types";
-import { SetForm } from "react-hooks-helper";
-import { UAUTextMaskCustom } from "../../../../../../components";
 import HeaderComponent from "../../steppers-components/header/header.component";
-
-interface IProfileSectionProps {
-  formData: IDefaultFormData;
-  setForm: SetForm;
-}
+import { IProfileSectionProps } from "./profile.section.type";
+import { UAUTextMaskCustomComponent } from "@components";
 
 function ProfileSection({
   setForm,
   formData,
-}: IProfileSectionProps) {
+}: IProfileSectionProps): ReactElement {
 
   const { firstname, lastname, nickname, phoneNumber } = formData;
 
@@ -58,7 +53,7 @@ function ProfileSection({
         value={phoneNumber}
         onChange={setForm}
         name="phoneNumber"
-        inputComponent={UAUTextMaskCustom as any}
+        inputComponent={UAUTextMaskCustomComponent as any}
         fullWidth
       />
     </Container>

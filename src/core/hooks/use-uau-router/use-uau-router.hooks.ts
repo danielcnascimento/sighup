@@ -1,16 +1,15 @@
+import { useCallback, useMemo } from "react";
 import { useRouter } from "next/router";
+import { IUseUAURouter } from "./use-uau-router.type";
 import { UseUauRouterEnum } from "./use-uau-router.enum";
-import { useMemo } from "react";
-import { IUseUauRouter } from "./use-uau-router.type";
 
-function useUauRouter(): IUseUauRouter {
+function useUAURouter(): IUseUAURouter {
 
   const router = useRouter();
 
-  const pushToConclusion = (): void => {
-    router.replace(UseUauRouterEnum.CONCLUSION);
-    return
-  }
+  const pushToConclusion = useCallback(() => (
+    router.replace(UseUauRouterEnum.CONCLUSION)
+  ), [])
 
   return useMemo(() => ({
     pushToConclusion,
@@ -19,4 +18,4 @@ function useUauRouter(): IUseUauRouter {
   ])
 }
 
-export default  useUauRouter;
+export default  useUAURouter;

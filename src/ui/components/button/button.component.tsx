@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { ReactNode } from 'react';
+import { IButton } from "./button.component.type";
 
 const useStyles = makeStyles({
   root: {
@@ -10,12 +10,6 @@ const useStyles = makeStyles({
   },
 });
 
-interface IButton {
-  text: string,
-  icon?: ReactNode,
-  onClick?: () => void,
-  isDisable?: boolean,
-}
 function UAUButtonComponent({ text, icon, onClick, isDisable }:IButton) {
   const classes = useStyles();
 

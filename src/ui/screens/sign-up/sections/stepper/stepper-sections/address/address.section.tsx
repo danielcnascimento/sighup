@@ -1,24 +1,14 @@
+import { ReactElement } from "react";
 import {
-  Box,
   Container,
-  IconButton,
   TextField,
-  Typography,
 } from "@material-ui/core";
-import { InfoOutlined } from "@material-ui/icons";
-import { IDefaultFormData } from "../../sign-up.stepper.section.types";
-import { SetForm } from "react-hooks-helper";
 import HeaderComponent from "../../steppers-components/header/header.component";
-import { IGetUserAddressResponse } from "../../../../../../../services/address/types/get-user-address-response.types";
+import { IAddressSectionProps } from "./address.section.type";
 
-interface IAddressSectionProps {
-  formData: IDefaultFormData;
-  setForm: SetForm;
-  addressInfo: IGetUserAddressResponse
-}
-
-function AddressSection({ setForm, formData, addressInfo }: IAddressSectionProps) {
+function AddressSection({ setForm, formData, addressInfo }: IAddressSectionProps): ReactElement {
   const { cep } = formData;
+
   const { data: {
     city: userAddressCity,
     district: userAddressNeiborhood,

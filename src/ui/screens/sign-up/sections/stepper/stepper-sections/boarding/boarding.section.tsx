@@ -1,18 +1,12 @@
+import { ReactElement } from "react";
 import {
   Container,
   TextField,
 } from "@material-ui/core";
-import { IDefaultFormData } from "../../sign-up.stepper.section.types";
-import { SetForm } from "react-hooks-helper";
 import HeaderComponent from "../../steppers-components/header/header.component";
+import { IBoardingSectionProps } from "./boarding.section.type";
 
-interface IBoardingSectionProps {
-  formData: IDefaultFormData;
-  setForm: SetForm;
-
-}
-
-function BoardingSection({ setForm, formData }: IBoardingSectionProps) {
+function BoardingSection({ setForm, formData }: IBoardingSectionProps): ReactElement {
   const { email, password, checkupPassword } = formData;
 
  // TODO: Implementação do controller apos release.

@@ -1,51 +1,30 @@
-import { ArrowForwardIosRounded } from "@material-ui/icons";
-import { UAUButtonComponent } from "../../../../components";
-import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
+import { ReactElement, useMemo } from "react";
+import { useStepperForm } from "@context/use-stepper-form.context";
 import {
-  HeaderSection,
   BoardingSection,
   AddressSection,
   ProfileSection,
 } from "./stepper-sections";
-import { useStepperForm } from "../../../../../context/use-stepper-form.context";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { IDefaultFormData } from "./sign-up.stepper.section.types";
-
-function ShowStepperUI() {
-  const { stepperProps } = useStepperForm();
-
-  switch (stepperProps.index) {
-    case 0:
-      return <BoardingSection {...stepperProps} />;
-    case 1:
-      return <ProfileSection {...stepperProps} />;
-    case 2:
-      return <AddressSection {...stepperProps} />;
-  }
-
-  return <h1> Ops! </h1>;
-}
+import {
+  UAUStepperComponent,
+  UAUStepsHeaderComponent,
+} from "@components";
+import { SighUpStepperContainer } from "./sign-up.stepper.section.style";
 
 function SighUpStepper() {
-  const { stepperProps: { index: step, handleStepperPress } } = useStepperForm();
+  const { stepperProps } = useStepperForm();
 
-  const { handleSubmit } = useForm<IDefaultFormData>();
-
-  const onSubmit: SubmitHandler<IDefaultFormData> = (data) => {
-    handleStepperPress()
-  }
+  const stepperMap: ReactElement[] = useMemo(() => ([
+      <BoardingSection key={0} {...stepperProps} />,
+      <AddressSection key={1} {...stepperProps} />,
+      <ProfileSection key={2} {...stepperProps} />,
+    ].filter((step) => !!step)
+  ), [stepperProps])
 
   return (
     <SighUpStepperContainer>
-      <HeaderSection />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <ShowStepperUI />
-      </form>
-      <UAUButtonComponent
-        text={step === 2 ? 'Finalizar' : 'Continuar'}
-        icon={<ArrowForwardIosRounded />}
-        onClick={() => handleStepperPress()}
-      />
+      <UAUStepsHeaderComponent />
+      <UAUStepperComponent {...{ stepperMap }} />
     </SighUpStepperContainer>
   );
 }

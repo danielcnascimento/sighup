@@ -22,5 +22,7 @@ export function useAddressService(): IUseAddressService {
 
   return useMemo(() => ({
     getUserAddress,
-  }), [axios])
+  }), [
+    getUserAddress
+  ])
 }

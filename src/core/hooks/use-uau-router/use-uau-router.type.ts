@@ -1,3 +1,3 @@
-export interface IUseUauRouter {
+export interface IUseUAURouter {
   pushToConclusion: VoidFunction,
 }
